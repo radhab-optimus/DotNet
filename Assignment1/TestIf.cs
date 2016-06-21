@@ -5,13 +5,13 @@ class TestIf
 	static void Main()
 	{
 	    Console.WriteLine("Enter preferred choice for language.");
-	    string InputChoice = Console.ReadLine().ToUpper();
+	    string inputChoice = Console.ReadLine().ToUpper();
 	    
-	    if (InputChoice == "VB")
+	    if (inputChoice == "VB")
 	    {
 	        Console.WriteLine("VB .NET: OOP, multithreading and more!");
 	    }
-	    else if (InputChoice == "C#")
+	    else if (inputChoice == "C#")
 	    {
 	        Console.WriteLine("Good choice, C# is a fine language.");
 	    }

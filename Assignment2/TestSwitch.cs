@@ -5,9 +5,9 @@ class TestSwitch
 	static void Main()
 	{
 	    Console.WriteLine("Enter preferred choice for language.");
-	    string InputChoice = Console.ReadLine().ToUpper();
+	    string inputChoice = Console.ReadLine().ToUpper();
 	    
-	    switch (InputChoice)
+	    switch (inputChoice)
      	{
 	        case "VB":
 	            Console.WriteLine("VB .NET: OOP, multithreading and more!");

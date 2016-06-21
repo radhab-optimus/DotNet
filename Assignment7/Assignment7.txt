@@ -1,0 +1,12 @@
+As for static members there is only one copy maintained that is shared by all the objects, 
+
+Initial value for currInterestRate  is: 0.04
+Three objects are created s1,s2 and s3
+Current Balance for s1 is set to 50
+Current Balance for s2 is set to 100
+s1.GetInterestRateObj() is called, it will return currInterestRate value as 0.04
+s2.SetInterestRateObj(0.08) is called, it will set currInterestRate to 0.08
+s1.GetInterestRateObj() is called it will return currInterestRate value as 0.08 (currInterestRate is static, so value changed through s2 obj will reflect in s1 obj)
+Current Balance for s2 is set to 10000.75
+SavingAccount.GetInterestRate() is called, it will set currInterestRate to 0.08
+OUTPUT: (c)0.04,0.08,0.08

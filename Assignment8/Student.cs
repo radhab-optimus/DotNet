@@ -22,7 +22,9 @@ namespace Induction
             S1.Print();
 
             //using overloaded print
-            S1.Print(Student.StudentDetails.FirstName);
+            Console.WriteLine("enter 1 for  FirstName, 2 for LastName, 3 for Age, 4 for Gender, 5 for EnrollmentNo,");
+            int userChoice = int.Parse(Console.ReadLine());
+            S1.Print(userChoice);
         }
     }
     class Student
@@ -56,7 +58,7 @@ namespace Induction
 
         public enum StudentDetails
         {
-            FirstName,
+            FirstName = 1,
             LastName,
             Age,
             Gender,
@@ -64,8 +66,9 @@ namespace Induction
         }
 
         // Overloading Print
-        public void Print(StudentDetails detail)
+        public void Print(int choice)
         {
+            StudentDetails detail = (StudentDetails)choice;
             switch (detail)
             {
                 case StudentDetails.FirstName:

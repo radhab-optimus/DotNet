@@ -4,10 +4,10 @@ class StringArray
 {
 	static void Main()
 	{
-        string[] Welcome = GetStringArray();
-        string WelcomeMsg = string.Join(" ", Welcome);
+        string[] welcome = GetStringArray();
+        string welcomeMsg = string.Join(" ", welcome);
 
-        Console.WriteLine(WelcomeMsg);
+        Console.WriteLine(welcomeMsg);
 	}
 
 	public static string[] GetStringArray()

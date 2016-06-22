@@ -7,18 +7,18 @@ namespace Induction
         static void Main()
         {
             Console.WriteLine("Enter students FirsName");
-            string FirstName = Console.ReadLine();
+            string firstName = Console.ReadLine();
 
             Console.WriteLine("Enter student's LastName");
-            string LastName = Console.ReadLine();
+            string lastName = Console.ReadLine();
 
             Console.WriteLine("Enter students age");
-            int Age = int.Parse(Console.ReadLine());
+            int age = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter gender");
-            string Gender = Console.ReadLine();
+            string gender = Console.ReadLine();
 
-            Student S1 = new Student(FirstName, LastName, Age, Gender);
+            Student S1 = new Student(firstName, lastName, age, gender);
             S1.Print();
 
             //using overloaded print
@@ -32,26 +32,26 @@ namespace Induction
         private int _age;
         private string _gender;
 
-        public Student(string FirstName, string LastName, int Age, string Gender)
+        public Student(string firstName, string lastName, int age, string gender)
         {
-            _firstName = FirstName;
-            _lastName = LastName;
-            _age = Age;
-            _gender = Gender;
+            _firstName = firstName;
+            _lastName = lastName;
+            _age = age;
+            _gender = gender;
         }
 
         public int StudentEnrolmentNo()
         {
-            Random EnrollmentNo = new Random();
-            int Number = EnrollmentNo.Next();
+            Random enrollmentNo = new Random();
+            int Number = enrollmentNo.Next();
             return Number;
         }
 
         public void Print()
         {
-            int EnrollmentNo = StudentEnrolmentNo();
+            int enrollmentNo = StudentEnrolmentNo();
             Console.WriteLine("welcome {0}", _firstName);
-            Console.WriteLine("Student's Name is {0} {1}, \n Age: {2}, \n Gender: {3}, \n EnrollmentNo : {4}", _firstName, _lastName, _age, _gender, EnrollmentNo);
+            Console.WriteLine("Student's Name is {0} {1}, \n Age: {2}, \n Gender: {3}, \n EnrollmentNo : {4}", _firstName, _lastName, _age, _gender, enrollmentNo);
         }
 
         public enum StudentDetails

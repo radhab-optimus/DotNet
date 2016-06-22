@@ -4,10 +4,10 @@ class TestEnum
 {
    public static void Main()
    {
-       string[] Names = Enum.GetNames(typeof(WeekDays));
-       foreach(string Name in Names)
+       string[] names = Enum.GetNames(typeof(WeekDays));
+       foreach(string name in names)
        {
-           Console.WriteLine("WeekDay: {0}", Name);
+           Console.WriteLine("WeekDay: {0}", name);
        }
    }
 }

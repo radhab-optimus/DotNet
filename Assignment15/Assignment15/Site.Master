@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Assignment15.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table>
+            <tr>
+                <td>
+                    <h1>Welcome to Optimus Information </h1>
+                </td>
+                <td>
+                    <asp:Image ID="Image1" runat="server" Height="108px" Width="242px" ImageUrl="~/images/logo.png" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style1">
+                    <h3>Hello..<asp:Label ID="name" runat="server"></asp:Label>
+                        ..!!!</h3>
+                </td>
+                <td>
+                    <asp:Button ID="Button1" runat="server" Text="LogOut" OnClick="Button1_Click" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server" OnItemCreated="SiteMapPath1_ItemCreated"></asp:SiteMapPath>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                    <asp:TreeView ID="TreeView1" runat="server" ShowLines="True">
+                        <HoverNodeStyle BackColor="#FFFF66" />
+                        <Nodes>
+                            <asp:TreeNode NavigateUrl="~/home.aspx" Text="Home" Value="Home">
+                                <asp:TreeNode NavigateUrl="~/Login.aspx" Text="Login" Value="Login"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/About.aspx" Text="About Us" Value="About Us"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/Career.aspx" Text="Career" Value="Career"></asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode NavigateUrl="~/Resources.aspx" Text="Resources" Value="Resources">
+                                <asp:TreeNode NavigateUrl="~/TechNews.aspx" Text="Technology News" Value="Technology News"></asp:TreeNode>
+                            </asp:TreeNode>
+                        </Nodes>
+                    </asp:TreeView>
+                    
+                </td>
+            </tr>
+        </table>
+        <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

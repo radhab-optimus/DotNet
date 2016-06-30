@@ -11,6 +11,12 @@ namespace Assignment15
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Session["name"] == null)
+            {
+                Button1.Visible = false;
+            }
+
             if (Session["name"] != null)
             {
                 name.Text = Session["name"].ToString();
